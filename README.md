@@ -1,20 +1,26 @@
 # ECE 398 vip-water-monitor
 
-The water monitor project provides users with a way to monitor a chicken water tank
-remotely. The system uses 915MHz LoRa radios, a Pi, and a notification system that
-provides your phone with a notification.
+The Water Monitor System / Chicken Nanny provides users with a way to monitor a chicken's water tank remotely. The system uses an ultrasonic sensor, 915MHz LoRa radios, a Raspberry Pi 3B+, and a notification system through Pushbullet that provides your phone with a notification.
 
 # How to build
 
-*Basic instructions on how others can replicate your project. Some things to include are:*
+See Water Monitor folder in VIP Google Drive.
 
-- *What IDE are you using?*
-- *If you are using any hardware, list it.*
-- *Wiring diagram/table*
+# Hardware
 
-# Other notes
+Includes all designed CAD files.
 
-*Anything else you think people should know about your project*
+# Software
+
+## ESP32 Folder
+Houses the program that goes on the ESP32 MCU. 
+
+Ultrasonic program interfaces with the ESP32 MCU and the Ultrasonic sensor. It detects distance: in our case, water level, and sends a radio transmission.
+
+## Raspberry Pi Folder
+Houses the program that goes on the Raspberry Pi.
+
+Bridge program receives on the radio and interfaces with the Pushbullet software to send text messages.
 
 ---
 
